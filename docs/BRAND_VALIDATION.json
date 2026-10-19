@@ -1,0 +1,74 @@
+{
+  "passed": true,
+  "renders": {
+    "general": {
+      "width": 1180,
+      "height": 820,
+      "seconds_to_render": 0.887196900031995,
+      "working_set_mb": 95.41796875,
+      "qml_warnings": [],
+      "interaction": {
+        "checked": true,
+        "passed": true,
+        "exact_whitespace_preserved": true,
+        "computer_engine_not_initialized": true
+      },
+      "mode": "offscreen software renderer; no model or computer action initialized",
+      "release_approved": false
+    },
+    "voice": {
+      "width": 1180,
+      "height": 820,
+      "seconds_to_render": 0.7325601999764331,
+      "working_set_mb": 94.72265625,
+      "qml_warnings": [],
+      "interaction": {
+        "checked": true,
+        "passed": true,
+        "voice_input_inserted_at_cursor": true,
+        "cancelled_result_ignored": true,
+        "stale_result_ignored": true,
+        "microphone_opened": false,
+        "asr_simulated": true,
+        "computer_engine_not_initialized": true
+      },
+      "mode": "offscreen software renderer; no model or computer action initialized",
+      "release_approved": false
+    },
+    "compact": {
+      "width": 860,
+      "height": 620,
+      "seconds_to_render": 0.7201059999642894,
+      "working_set_mb": 89.34375,
+      "qml_warnings": [],
+      "interaction": {
+        "checked": false
+      },
+      "mode": "offscreen software renderer; no model or computer action initialized",
+      "release_approved": false
+    },
+    "dark": {
+      "width": 1180,
+      "height": 820,
+      "seconds_to_render": 0.7279425000306219,
+      "working_set_mb": 92.08984375,
+      "qml_warnings": [],
+      "interaction": {
+        "checked": false
+      },
+      "mode": "offscreen software renderer; no model or computer action initialized",
+      "release_approved": false
+    }
+  },
+  "exe_icon_resources_present": true,
+  "brand_assets_match": true,
+  "engine_footer_removed": true,
+  "gradient_animated": false,
+  "frozen_speech_smoke": {
+    "text": "請幫我開啟資料夾,不要刪除任何檔案。",
+    "completed": true
+  },
+  "microphone_opened_this_update": false,
+  "target_hardware_tested": false,
+  "release_approved": false
+}

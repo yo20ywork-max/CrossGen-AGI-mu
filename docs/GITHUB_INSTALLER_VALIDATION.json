@@ -1,0 +1,25 @@
+{
+  "version": "0.1-installer-github-1",
+  "unit_tests_passed": 12,
+  "source_compilation_passed": true,
+  "frozen_ui": {
+    "qml_warnings": [],
+    "frozen": true,
+    "microphone_opened": false,
+    "installation_started": false
+  },
+  "frozen_shutdown": {
+    "button_clicked": true,
+    "owned_process_exited": true,
+    "passed": true
+  },
+  "requires_private_account": false,
+  "upstream_model_bytes_changed": false,
+  "full_fresh_install_tested": false,
+  "target_rtx4050_tested": false,
+  "release_approved": false,
+  "exe": {
+    "bytes": 63927422,
+    "sha256": "99ad44853a2aa103cd3d4607cb456fe31f36572ab9cc430c6b3e112ad6bf211d"
+  }
+}

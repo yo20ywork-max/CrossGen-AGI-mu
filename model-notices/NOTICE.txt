@@ -1,0 +1,1 @@
+Internal meeting distribution notice: inference core is based on Qwen2.5-Coder-7B-Instruct, revision c03e6d358207e414f1eca0bb1891e29f1db0e242, Apache-2.0. CrossGen product identity and adaptation are described separately. This notice is not injected into model inputs. Product source is not relicensed by this notice.

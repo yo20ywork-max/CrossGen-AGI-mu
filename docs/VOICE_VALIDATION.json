@@ -1,0 +1,104 @@
+{
+  "real_frozen_helpers": true,
+  "audio_uploaded": false,
+  "microphone_audio_saved": false,
+  "target_rtx4050_tested": false,
+  "full_release_approved": false,
+  "checks": {
+    "synthetic_zh_tw_transcription": {
+      "passed": true,
+      "wall_seconds": 5.827999999979511,
+      "fixture": "Windows zh-TW synthetic speech; not human accuracy benchmark",
+      "text": "請幫我開啟資料夾,不要刪除任何檔案。",
+      "audio_seconds": 4.676375,
+      "load_seconds": 0.7651629000320099,
+      "transcribe_seconds": 2.547320400015451
+    },
+    "real_microphone_record_stop_transcribe": {
+      "passed": true,
+      "wall_seconds": 3.672000000020489,
+      "states": [
+        "recording",
+        "transcribing"
+      ],
+      "completed": true,
+      "audio_seconds": 2.0,
+      "transcript_saved": false,
+      "microphone_accuracy_assessed": false
+    },
+    "cancel_real_recording": {
+      "passed": true,
+      "wall_seconds": 0.28200000000651926,
+      "states": [
+        "recording"
+      ],
+      "cancelled_without_transcript": true
+    },
+    "cancel_after_real_recording_before_result": {
+      "passed": true,
+      "wall_seconds": 1.0150000000139698,
+      "states": [
+        "recording",
+        "transcribing"
+      ],
+      "cancelled_without_transcript": true
+    },
+    "cancel_file_transcription": {
+      "passed": true,
+      "wall_seconds": 0.43799999996554106,
+      "cancelled_without_transcript": true
+    },
+    "restart_after_cancellation": {
+      "passed": true,
+      "wall_seconds": 2.3429999999934807,
+      "fixture": "Windows zh-TW synthetic speech; not human accuracy benchmark",
+      "text": "請幫我開啟資料夾,不要刪除任何檔案。",
+      "audio_seconds": 4.676375,
+      "load_seconds": 0.6483840000000782,
+      "transcribe_seconds": 1.273695400042925
+    }
+  },
+  "all_owned_workers_exited": true,
+  "passed": true,
+  "ui_voice": {
+    "width": 1180,
+    "height": 820,
+    "seconds_to_render": 0.891932700003963,
+    "working_set_mb": 91.9375,
+    "qml_warnings": [],
+    "interaction": {
+      "checked": true,
+      "passed": true,
+      "voice_input_inserted_at_cursor": true,
+      "cancelled_result_ignored": true,
+      "stale_result_ignored": true,
+      "microphone_opened": false,
+      "asr_simulated": true,
+      "computer_engine_not_initialized": true
+    },
+    "mode": "offscreen software renderer; no model or computer action initialized",
+    "release_approved": false
+  },
+  "ui_general": {
+    "width": 1180,
+    "height": 820,
+    "seconds_to_render": 0.7147850000183098,
+    "working_set_mb": 91.109375,
+    "qml_warnings": [],
+    "interaction": {
+      "checked": true,
+      "passed": true,
+      "exact_whitespace_preserved": true,
+      "computer_engine_not_initialized": true
+    },
+    "mode": "offscreen software renderer; no model or computer action initialized",
+    "release_approved": false
+  },
+  "unit_tests": {
+    "passed": 10,
+    "suite": [
+      "tests.test_voice_session",
+      "tests.test_speech_process"
+    ]
+  }
+}

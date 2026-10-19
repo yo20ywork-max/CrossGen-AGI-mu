@@ -1,0 +1,138 @@
+{
+  "generated_utc": "2026-09-06T21:42:05.598521+00:00",
+  "training_rows": 1799,
+  "categories": {
+    "tools": 390,
+    "completion": 484,
+    "recovery": 114,
+    "code": 241,
+    "locale": 46,
+    "asr": 70,
+    "calibration": 20,
+    "history": 94,
+    "literal": 58,
+    "grounded": 46,
+    "negation": 32,
+    "conditional_plan": 84,
+    "identity": 120
+  },
+  "retention_flagged_rows": 273,
+  "configuration": {
+    "base": "Qwen/Qwen2.5-Coder-7B-Instruct",
+    "revision": "c03e6d358207e414f1eca0bb1891e29f1db0e242",
+    "seed": 20260906,
+    "epochs": 3,
+    "learning_rate": 2e-05,
+    "rank": 32,
+    "alpha": 64,
+    "target_modules": "all-linear",
+    "gradient_accumulation": 8,
+    "warmup_ratio": 0.05,
+    "max_length": 12288,
+    "retention_kl_weight": 0.0,
+    "retention_positions": 16,
+    "max_train_seconds": 10800,
+    "max_retention_dev_nll_increase": 0.25,
+    "release_status": "prepared_not_trained",
+    "answer_logits_only": true,
+    "bf16_autocast": true,
+    "longest_sample_preflight": true,
+    "draft_notes": {
+      "initialization": "Fresh rank32 adapter on the same pinned original base; no reuse of failed adapters.",
+      "data": "All original1633 training rows preserved; 88 uncued identity,28 action contrasts,50 history/quotation contrasts added.",
+      "optimizer_choice": "Same learning rate2e-5, rank32, global batch8 and3 full epochs as prior run, to measure this data revision without simultaneous optimizer changes.",
+      "limitations": "Local data readiness only. New full-size GPU preflight, trained artifacts and all release gates remain unproven."
+    },
+    "release_thresholds_file": "RELEASE_GATES.json",
+    "release_selection": "Generation, artifact and semantic gates required; development NLL is diagnostic only."
+  },
+  "epochs": [
+    {
+      "epoch": 1,
+      "dev_nll": {
+        "asr": 0.0859212518359224,
+        "code": 0.19622170366346836,
+        "completion": 0.3143469498016029,
+        "conditional_plan": 0.1046683865909775,
+        "grounded": 0.3275279575245804,
+        "history": 0.8856496546650305,
+        "identity": 0.23263123827200616,
+        "literal": 0.004387675384090731,
+        "locale": 0.26111437613144517,
+        "negation": 0.016905740834772587,
+        "recovery": 0.07205251976847649,
+        "tools": 0.030871970113366842
+      },
+      "macro_nll": 0.21102495204881166,
+      "retention_eligible": true,
+      "full_epoch": true,
+      "adapter_sha256": "acfeaee484071d4ec84478e1d17cbb0a26340a01eb72ee382894d979117a8a9a"
+    },
+    {
+      "epoch": 2,
+      "dev_nll": {
+        "asr": 0.15798073811844612,
+        "code": 0.1832181166857481,
+        "completion": 0.28890641703716635,
+        "conditional_plan": 0.02159551855930615,
+        "grounded": 0.12154809510290458,
+        "history": 0.8251578832326535,
+        "identity": 0.21155676138914714,
+        "literal": 0.0011765791991820151,
+        "locale": 0.2369258152320981,
+        "negation": 0.00933983625977167,
+        "recovery": 0.02899890382670694,
+        "tools": 0.024710224708542228
+      },
+      "macro_nll": 0.17592624077930608,
+      "retention_eligible": true,
+      "full_epoch": true,
+      "adapter_sha256": "27bc45a39ebeb105fde551d9d890688f867f4f8e5d00fbaa205a6f4cf60f25cb"
+    },
+    {
+      "epoch": 3,
+      "dev_nll": {
+        "asr": 0.1657567359574993,
+        "code": 0.1819784315302968,
+        "completion": 0.30157099207558313,
+        "conditional_plan": 0.019316427309864333,
+        "grounded": 0.07873430718793391,
+        "history": 0.8593145777849713,
+        "identity": 0.23033841125652543,
+        "literal": 0.0011281203688408173,
+        "locale": 0.2477307573426515,
+        "negation": 0.011407416274388587,
+        "recovery": 0.03114948610568212,
+        "tools": 0.030069616448599845
+      },
+      "macro_nll": 0.1798746066369031,
+      "retention_eligible": true,
+      "full_epoch": true,
+      "adapter_sha256": "2ca5d6b6b602be08e03e0abc4145e6be71967e7580d23cfdb9551c77e3d5d0a3"
+    }
+  ],
+  "nll_selector_epoch": 2,
+  "meeting_adapter_epoch": 3,
+  "training_result": {
+    "optimizer_steps": 675,
+    "planned_optimizer_steps": 675,
+    "training_completed": true,
+    "disk_reload_logits_verified": true,
+    "world_size": 2,
+    "global_batch": 8,
+    "rank_local_batch": "strided partition without duplicate padding",
+    "seconds": 4065.592789977789,
+    "adapter_changed": true,
+    "optimizer_state": "Fresh AdamW; no exact optimizer resume",
+    "data_lock_sha256": "e8af99592566e41a9cb133e3a8770a1c26a410fe3bbadd73e13003f3b47fdcf6",
+    "trainer_sha256": "793c97e2b02c8a12f64b4672350aeee31adb72f25e4595421163273bbc389ff0",
+    "engine_sha256": "be201b2cb4e6bf0aaabcd19d4ba31a96171ae4698739fb5ba22541fcefdd02e0",
+    "reducer_sha256": "4cd58eb662ae2999fc6248d608c6fb652bbf59c130093098935839771d9aa070"
+  },
+  "notes": [
+    "configuration.release_status is a pre-training copied field; terminal training_result is the actual execution evidence.",
+    "No new training for this meeting package.",
+    "NLL selection is not release approval."
+  ],
+  "release_approved": false
+}
